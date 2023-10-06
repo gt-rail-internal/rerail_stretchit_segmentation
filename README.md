@@ -2,7 +2,7 @@
 
 This repo uses Detic to get the segmentation data of all objects in the input image.
 
-Majority of the contents of this repo are either copied directly from or modified versions of the original Detic repo from facebook. https://github.com/facebookresearch/Detic/tree/main
+Majority of the contents of this repo are either copied directly from or modified versions of the original Detic repo from facebook. https://github.com/facebookresearch/Detic/tree/main.
 To setup Detic, you can follow the following steps:
 1. Create a conda environment, activate it, and download pytorch, torchvision, and torchaudio e.g.
    conda create --name detic python=3.8 -y
