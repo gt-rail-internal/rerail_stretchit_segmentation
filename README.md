@@ -16,7 +16,7 @@ To setup Detic, you can follow the following steps:
    pip install -e .
 3. Install the edited version of Detic from this repo.
    cd ..
-   git clone https://github.com/TofunmiSodimu/rerail_stretchit_segmentation/Detic.git --recurse-submodules
+   git clone https://github.com/gt-rail-internal/rerail_stretchit_segmentation/Detic.git --recurse-submodules
    cd Detic
    pip install -r requirements.txt
 
