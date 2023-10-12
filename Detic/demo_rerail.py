@@ -167,13 +167,11 @@ def detect(input,output):
         for path in tqdm.tqdm(args.input, disable=not args.output):
             img = read_image(path, format="BGR")
             start_time = time.time()
-            predictions, visualized_output, labels = demo.run_on_image(img)
+            predictions, visualized_output, labels, masks_dets = demo.run_on_image(img)
             confidences = (predictions["instances"].scores).tolist()
-            class_idx = (predictions["instances"].pred_classes).tolist()
             class_names = labels
             boxes = ((predictions["instances"].pred_boxes).tensor).tolist()
         
-            # print(confidences,class_names,boxes)
             logger.info(
                 "{}: {} in {:.2f}s".format(
                     path,
@@ -197,7 +195,7 @@ def detect(input,output):
                 cv2.imshow(WINDOW_NAME, visualized_output.get_image()[:, :, ::-1])
                 if cv2.waitKey(0) == 27:
                     break  # esc to quit
-            return boxes, class_names
+            return boxes,confidences,class_names, masks_dets
     elif args.webcam:
         assert args.input is None, "Cannot have both --input and --webcam!"
         assert args.output is None, "output not yet supported with --webcam!"
