@@ -8,7 +8,8 @@ To setup Detic, you can follow the following steps:
 1. Create a conda environment, activate it, and download pytorch, torchvision, and torchaudio e.g.
    - conda create --name detic python=3.8 -y
    - conda activate detic
-   - conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch-lts -c nvidia
+   - conda install cudatoolkit=11.1 -c nvidia
+   - conda install pytorch==1.8.1 torchvision==0.9.1 torchaudio==0.8.1 -c pytorch
 2. Install Detectron2 e.g.
    -- Do this under your working directory --
    - git clone git@github.com:facebookresearch/detectron2.git
