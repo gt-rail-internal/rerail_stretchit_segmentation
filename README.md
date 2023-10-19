@@ -18,7 +18,7 @@ To setup Detic, you can follow the following steps (cuda should alreday be insta
 3. Install the edited version of Detic from this repo.
    - cd ..
    - git clone https://github.com/gt-rail-internal/rerail_stretchit_segmentation.git --recurse-submodules
-   - cd Detic
+   - cd rerail_stretchit_segmentation/Detic
    - pip install -r requirements.txt
 
 - Please note: you would need to download the model weights before running.
