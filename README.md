@@ -4,11 +4,11 @@ This repo uses Detic to get the segmentation data of all objects in the input im
 
 ## Majority of the contents of this repo are either copied directly from or modified versions of the original Detic repo from facebook. https://github.com/facebookresearch/Detic/tree/main.
 
-To setup Detic, you can follow the following steps:
+To setup Detic, you can follow the following steps (cuda should alreday be installed on your system before running these steps):
 1. Create a conda environment, activate it, and download pytorch, torchvision, and torchaudio e.g.
    - conda create --name detic python=3.8 -y
    - conda activate detic
-   - conda install cudatoolkit=11.1 -c nvidia
+   - conda install cudatoolkit=11.1 -c nvidia 
    - conda install pytorch==1.8.1 torchvision==0.9.1 torchaudio==0.8.1 -c pytorch
 2. Install Detectron2 e.g.
    -- Do this under your working directory --
@@ -17,7 +17,7 @@ To setup Detic, you can follow the following steps:
    - pip install -e .
 3. Install the edited version of Detic from this repo.
    - cd ..
-   - git clone https://github.com/gt-rail-internal/rerail_stretchit_segmentation/Detic.git --recurse-submodules
+   - git clone https://github.com/gt-rail-internal/rerail_stretchit_segmentation.git --recurse-submodules
    - cd Detic
    - pip install -r requirements.txt
 
