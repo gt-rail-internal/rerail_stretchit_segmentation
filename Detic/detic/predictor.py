@@ -97,7 +97,7 @@ class VisualizationDemo(object):
                 vis_output,labels = visualizer.draw_instance_predictions(predictions=instances)
 
         return predictions, vis_output, labels
-
+    
     def _frame_from_video(self, video):
         while video.isOpened():
             success, frame = video.read()
