@@ -9,7 +9,7 @@ output = 'out2.png'
 # 'masks_dets' is the binary mask if each of the predicted objects. It has three dimensions; the first represents the no of images, 
 # the second and third are the columns and rows or vice versa
 
-boxes,confidences,classes,masks_dets = detect(input,output)
+boxes,confidences,masks_dets,classes = detect(input,output)
 
 # instances = masks_dets.shape[0]
 # rows = masks_dets.shape[1]
