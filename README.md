@@ -28,4 +28,4 @@ After pulling from this repo, do the following in your terminal to download the 
 2. mkdir models
 4. wget https://dl.fbaipublicfiles.com/detic/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.pth -O models/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.pth
 
-- See the 'get_segmentation_data.py' code for a sample on how to call the 'detect' function from 'demo_derail.py' in your code. Please do not move the 'demo_derail.py' code out of it's current directory as it relies on many of the other files in that directory. Consider adding the path to 'demo_derail.py' into whatever code you're working on if it is in a different directory.
+- See the 'get_segmentation_data.py' code for a sample on how to call the 'detect' function from 'demo_rerail.py' in your code. Please do not move the 'demo_rerail.py' code out of it's current directory as it relies on many of the other files in that directory. Consider adding the path to 'demo_rerail.py' into whatever code you're working on if it is in a different directory.
