@@ -6,9 +6,9 @@ This repo uses Detic to get the segmentation data of all objects in the input im
 
 To setup Detic, you can follow the following steps:
 1. Install CUDA 11.3 if you haven't (or whatever version that is compatible with Detic - please check out their documentation). The link below will work you through the steps to install CUDA 11.3 specifically.
-  - https://gist.github.com/Mahedi-61/2a2f1579d4271717d421065168ce6a73
+   - https://gist.github.com/Mahedi-61/2a2f1579d4271717d421065168ce6a73
 2. Install pytorch, torchvision, torchaudio that is compatible with CUDA 11.3
-  -  pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
+   -  pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
 3. Install Detectron2 e.g.
    -- Do this under your working directory --
    - git clone https://github.com/facebookresearch/detectron2.git
