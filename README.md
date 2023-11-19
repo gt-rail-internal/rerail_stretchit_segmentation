@@ -19,7 +19,7 @@ To setup Detic, you can follow the following steps:
    - git clone https://github.com/gt-rail-internal/rerail_stretchit_segmentation.git --recurse-submodules
    - cd rerail_stretchit_segmentation/Detic
    - pip install -r requirements.txt
-   - replace the 'visualizer.py' file in the detectron2 folder with the 'visualizer.py' file from the Detic repo
+   - replace the 'visualizer.py' file in the detectron2 folder with the 'visualizer.py' file from this 'rerail_stretchit_segmentation' repo
 
 - Please note: you would need to download the model weights before running.
 
