@@ -2,7 +2,7 @@
 
 import rospy
 import sys
-sys.path.append("/home/tofunmi/rerail_stretchit_segmentation/Detic")
+sys.path.append("ADD PATH TO DETIC HERE")
 from demo_rerail import *
 import numpy as np
 from sensor_msgs.msg import Image
