@@ -42,5 +42,5 @@ After pulling from this repo, do the following in your terminal to download the 
 - 'segmentation/scripts/obj_server.py' is a sample code for subscribing to the camera topic, detecting the object of interest in the image using Detic, and returning the image size, classes of all objects in the image, bounding box of the specified object, mask of the specified object, and confidence of the specified object upon request by a client as a ROS srv of type 'Object_detection' (see 'segmentation/srv/Object_detection.srv' for srv definition).
    ### To call 'obj_server.py' - rosrun segmentation obj_server.py
 
-- 'segmentation/scripts/obj_client.py' is a sample code for requesting a srv from the 'obj_server.py' node. The object name and image must be passed with the request.
+- 'segmentation/scripts/obj_client.py' is a sample code for requesting a srv from the 'obj_server.py' node. The object name (passed as a param) and image (passed within the code) must be passed with the request.
    ### To call 'obj_client.py' - rosrun segmentation obj_client.py _object:='OBJ_NAME'
