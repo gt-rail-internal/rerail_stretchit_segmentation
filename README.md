@@ -1,4 +1,5 @@
 # rerail_stretchit_segmentation
+Object detection stack for Stretch 2:
 
 This repo uses Detic to get the segmentation data of objects in the input image, and returns the image size, classes of all objects in the image, bounding box of the specified object, mask of the specified object, and confidence of the specified object as a ROS message or service.
 
