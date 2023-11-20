@@ -44,3 +44,7 @@ After pulling from this repo, do the following in your terminal to download the 
 
 - 'segmentation/scripts/obj_client.py' is a sample code for requesting a srv from the 'obj_server.py' node. The object name (passed as a param) and image (passed within the code) must be passed with the request.
    ### To call 'obj_client.py' - rosrun segmentation obj_client.py _object:='OBJ_NAME'
+
+
+## TODO
+-Convert masks to point clouds for determining grasp pose.
