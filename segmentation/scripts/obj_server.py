@@ -39,8 +39,7 @@ class segment():
         cv_image = cv2.rotate(cv_image,cv2.ROTATE_90_CLOCKWISE)
         cv_image = cv2.flip(cv_image,1)
         cv2.imwrite(filename, cv_image) 
-        cv2.imshow('image',cv_image)
-        cv2.waitKey(3)
+        cv2.destroyAllWindows()
 
         # Use detic for object detection
         input = filename
@@ -82,7 +81,7 @@ class segment():
                                     bounding_box=srv_box,confidence=srv_confidence)
         
 
-        #  Publish messages
+        #  Respond to query
         rospy.loginfo("Returning masks and corresponding classes")
         rate = rospy.Rate(10) # 10hz
         rate.sleep()
