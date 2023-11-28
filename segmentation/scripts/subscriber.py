@@ -2,7 +2,7 @@
 
 import rospy
 import sys
-sys.path.append("ADD PATH TO DETIC HERE")
+sys.path.append("/home/tofunmi/rerail_stretchit_segmentation/Detic")
 from demo_rerail import *
 import numpy as np
 from sensor_msgs.msg import Image
@@ -37,10 +37,8 @@ class segment():
         filename = 'ros_test.png'
         cv_image = bridge.imgmsg_to_cv2(img,"bgr8")
         cv_image = cv2.rotate(cv_image,cv2.ROTATE_90_CLOCKWISE)
-        cv_image = cv2.flip(cv_image,1)
         cv2.imwrite(filename, cv_image) 
-        cv2.imshow('image',cv_image)
-        cv2.waitKey(3)
+        cv2.destroyAllWindows()
 
         # Use detic for object detection
         input = filename
@@ -66,6 +64,8 @@ class segment():
 
         # Get box
         self.box = list(boxes[idx])
+        self.box = [self.box[1],720-self.box[2],self.box[3],720-self.box[0]]
+        print(self.box,'box')
 
         # Get confidence
         self.confidence = confidences[idx]
