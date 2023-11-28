@@ -2,7 +2,7 @@
 
 import rospy
 import sys
-sys.path.append("ADD PATH TO DETIC HERE")
+sys.path.append("/home/tofunmi/rerail_stretchit_segmentation/Detic")
 from demo_rerail import *
 import numpy as np
 
@@ -25,7 +25,6 @@ class segment():
 
         #  Call server
         s = rospy.Service('object_detection',Object_detection,self.callback)
-        s
 
     # Process images and get mask function
     def callback(self,data):
@@ -33,11 +32,10 @@ class segment():
         self.object_name = data.obj_name
         
         # Get image and convert to cv2 format
-        img = data.img
+        img = data.img   
         filename = 'ros_test.png'
         cv_image = bridge.imgmsg_to_cv2(img,"bgr8")
         cv_image = cv2.rotate(cv_image,cv2.ROTATE_90_CLOCKWISE)
-        cv_image = cv2.flip(cv_image,1)
         cv2.imwrite(filename, cv_image) 
         cv2.destroyAllWindows()
 
@@ -65,10 +63,11 @@ class segment():
 
         # Get box
         self.box = list(boxes[idx])
+        self.box = [self.box[1],720-self.box[2],self.box[3],720-self.box[0]]
+        print(self.box,'box')
 
         # Get confidence
         self.confidence = confidences[idx]
-        print(self.confidence)
 
         #  Define the messages
         srv_masks_x = Int32MultiArray(data=x)
