@@ -88,3 +88,4 @@ After pulling from this repo, do the following in your terminal to download the 
 
 ## TODO
 -Convert masks to point clouds for determining grasp pose.
+- Try out segment-anything instead of Detic
