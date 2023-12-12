@@ -58,7 +58,7 @@ add_message_files(
  add_service_files(
    FILES
    Object_detection.srv
-
+   StretchSegmentation.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -161,17 +161,22 @@ include_directories(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
- catkin_install_python(PROGRAMS
-   scripts/obj_server.py
-   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
- )
- catkin_install_python(PROGRAMS scripts/test_listen.py
+catkin_install_python(PROGRAMS scripts/obj_server.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+catkin_install_python(PROGRAMS scripts/test_listen.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 catkin_install_python(PROGRAMS scripts/subscriber.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 catkin_install_python(PROGRAMS scripts/obj_client.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+catkin_install_python(PROGRAMS scripts/segmentation_node.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+catkin_install_python(PROGRAMS scripts/segmentation_node_pure_DETIC.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
