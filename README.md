@@ -33,7 +33,7 @@ After pulling from this repo, do the following in your terminal to download the 
 
 
 ## Using the 'segmentation' ROS Package
-- This package has 4 sample scripts:
+- This package has 6 sample scripts:
   
 ### 'segmentation/scripts/subscriber.py'
 - This is a sample code for subscribing to the camera topic, detecting the object of interest in the image using Detic, and publishing the image size, classes of all objects in the image, bounding box of the specified object, mask of the specified object, and confidence of the specified object as a ROS message of type 'masks_classes' (see 'segmentation/msg/masks_classes.msg' for msg definition). Object name must be passed as a parameter when running.
@@ -84,8 +84,12 @@ After pulling from this repo, do the following in your terminal to download the 
   ```
   rosrun segmentation obj_client.py _object:='OBJ_NAME'
   ```
+### 'segmentation/scripts/segmentation_node.py'
+- This node combines the segmentation results from DETIC with returned segmented object from RAIL segmentation to return a point cloud for the object of interest.   
 
-
+### 'segmentation/scripts/segmentation_node_pure_DETIC.py'
+- This node converts the segmentaiton mask from DETIC to the point cloud of the object of interest.
+  
 ## TODO
 -Convert masks to point clouds for determining grasp pose.
 - Try out segment-anything instead of Detic
